@@ -1,8 +1,8 @@
 Package.describe({
   name: "nemo64:translator",
   summary: "A feature rich internationalization (i18n) solution.",
-  version: "0.6.15",
-  git: "https://github.com/Nemo64/meteor-translator"
+  version: "0.7.0",
+  git: "https://github.com/jensvrai/meteor-translator"
 });
 
 Package._transitional_registerBuildPlugin({
@@ -35,7 +35,7 @@ Package.on_use(function(api) {
     'ejson', // LanguageArray and Locale are ejson'able
     'deps',
     // meteorite
-    'meteorhacks:inject-initial@1.0.2',
+    'meteorhacks:inject-initial@1.0.4',
     'mrt:moment@2.8.1'
   ]);
   api.use([

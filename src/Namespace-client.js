@@ -21,7 +21,7 @@ _.extend(Namespace.prototype, {
     var self = this;
     
     // get the existing locales from injection
-    var namespaces = Injected.obj('translator-namespaces');
+    var namespaces = Injected.obj('translator-namespaces') || Meteor.settings &&  Meteor.settings.public &&  Meteor.settings.public.translatorNamespaces;
     if (! namespaces.hasOwnProperty(self._name)) {
       throw new Error("Namespace '" + self._name + "' does not exist");
     }
